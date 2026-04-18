@@ -18,7 +18,7 @@ public class UserHomeActivity extends AppCompatActivity {
     ArrayList<Movie> trendingList, nowShowingList, comingSoonList;
     CinemaDB cinemaDB;
 
-    // 👇👇👇 KHAI BÁO BIẾN TV ĐỂ HIỆN TÊN RẠP TRÊN ĐẦU 👇👇👇
+
     TextView navProfile, navCinema, tvHeaderCinemaName;
 
     @Override
