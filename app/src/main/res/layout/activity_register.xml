@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TẠO TÀI KHOẢN"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtRegUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:hint="Tên đăng nhập"
+        android:inputType="text"
+        android:paddingStart="16dp" />
+
+    <EditText
+        android:id="@+id/edtRegPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="16dp" />
+
+    <EditText
+        android:id="@+id/edtRegConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:hint="Nhập lại mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="16dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#000000"
+        android:text="ĐĂNG KÝ NGAY"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp" />
+
+    <TextView
+        android:id="@+id/tvGoToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Đã có tài khoản? Đăng nhập tại đây"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+</LinearLayout>

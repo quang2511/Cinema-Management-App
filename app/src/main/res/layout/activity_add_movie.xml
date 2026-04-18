@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THÊM PHIM MỚI"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/edtTenPhim"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Tên phim (VD: Lật Mặt 7)"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/edtGiaVe"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Giá vé (VD: 90000)"
+            android:inputType="numberDecimal"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/edtThoiLuong"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Thời lượng (VD: 120 phút)"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/edtNgonNgu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Ngôn ngữ (VD: Phụ đề Việt)"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/edtMoTa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Mô tả nội dung phim..."
+            android:gravity="top|left"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnLuuPhim"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="LƯU VÀO HỆ THỐNG"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnHuyThemPhim"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="HỦY BỎ"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSeat"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/tvScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarSeat"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFCDD2"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="MÀN HÌNH CHÍNH"
+        android:textColor="#D32F2F"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layoutLegend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvScreen"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="#E0E0E0" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Trống   " />
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="#4CAF50" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Đang chọn   " />
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="#9E9E9E" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Đã đặt" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSeats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLegend"
+        android:layout_above="@+id/layoutBottomSeat"
+        android:layout_marginTop="16dp"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBottomSeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTotalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Ghế đang chọn: Chưa có\nTổng tiền: 0 VNĐ"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnContinuePayment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:backgroundTint="#D32F2F"
+            android:text="TIẾP TỤC THANH TOÁN"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
