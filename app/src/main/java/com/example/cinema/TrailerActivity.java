@@ -1,48 +1,60 @@
 package com.example.cinema;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ProgressBar;
-import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TrailerActivity extends AppCompatActivity {
 
-    VideoView videoView;
-    ImageButton btnClose;
-    ProgressBar loading;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trailer);
 
-        videoView = findViewById(R.id.videoViewTrailer);
-        btnClose = findViewById(R.id.btnCloseTrailer);
-        loading = findViewById(R.id.loadingTrailer);
 
 
         String videoName = getIntent().getStringExtra("VIDEO_NAME");
 
+
+        String youtubeUrl = "https://www.youtube.com/watch?v=odM92ap8_c0";
+
         if (videoName != null) {
-            int videoResId = getResources().getIdentifier(videoName, "raw", getPackageName());
-            if (videoResId != 0) {
-                Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + videoResId);
-                videoView.setVideoURI(videoUri);
-
-                videoView.setOnPreparedListener(mp -> {
-                    loading.setVisibility(View.GONE);
-                    videoView.start();
-                });
-
-                videoView.setOnCompletionListener(mp -> videoView.start());
-            } else {
-                loading.setVisibility(View.GONE); // Ẩn loading nếu không tìm thấy video
+            switch (videoName.toLowerCase()) {
+                case "panda":
+                    youtubeUrl = "https://www.youtube.com/watch?v=_inKs4eeHiI";
+                    break;
+                case "godzilla":
+                    youtubeUrl = "https://www.youtube.com/watch?v=lV1OOlGwExM";
+                    break;
+                case "mai":
+                    youtubeUrl = "https://www.youtube.com/watch?v=1b-Vd2K7bA8";
+                    break;
+                case "latmat":
+                    youtubeUrl = "https://www.youtube.com/watch?v=uK1XWMBX_A0";
+                    break;
+                case "dune":
+                    youtubeUrl = "https://www.youtube.com/watch?v=Way9Dexny3w";
+                    break;
+                case "deadpool":
+                    youtubeUrl = "https://www.youtube.com/watch?v=73_1biukkMQ";
+                    break;
+                case "exhuma":
+                    youtubeUrl = "https://www.youtube.com/watch?v=pY5m_vRkHqI";
+                    break;
+                case "insideout":
+                    youtubeUrl = "https://www.youtube.com/watch?v=LEjhY15eCx0";
+                    break;
+                case "dao":
+                    youtubeUrl = "https://www.youtube.com/watch?v=7A64b5w5WxE";
+                    break;
             }
         }
 
-        btnClose.setOnClickListener(v -> finish());
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(intent);
+
+
+        finish();
     }
 }

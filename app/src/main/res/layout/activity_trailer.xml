@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <VideoView
-        android:id="@+id/videoViewTrailer"
+    <WebView
+        android:id="@+id/webViewTrailer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
@@ -18,7 +18,8 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="20dp"
         android:background="@android:color/transparent"
-        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:elevation="10dp"/>
 
     <ProgressBar
         android:id="@+id/loadingTrailer"
